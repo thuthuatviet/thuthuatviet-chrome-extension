@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thủ Thuật Việt — Trợ Lý Công Sở & AI 60s</title>
+  <link rel="stylesheet" href="sidepanel.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-row">
+      <div class="brand-title">
+        <span class="brand-logo">⚡</span>
+        <div>
+          <h1>Thủ Thuật Việt</h1>
+          <p>Giải Pháp Nhanh • Công Cụ Thực • 100% Free</p>
+        </div>
+      </div>
+      <a href="https://thuthuatviet.com" target="_blank" rel="noopener noreferrer" class="home-pill" title="Mở trang chủ thuthuatviet.com">
+        🌐 Web
+      </a>
+    </div>
+
+    <nav class="tab-bar" role="tablist" aria-label="Chức năng chính">
+      <button type="button" class="tab-btn is-active" data-tab="tab-search" role="tab" aria-selected="true">
+        ⚡ 30s &amp; Prompt
+      </button>
+      <button type="button" class="tab-btn" data-tab="tab-tools" role="tab" aria-selected="false">
+        🛠️ Công Cụ
+      </button>
+      <button type="button" class="tab-btn" data-tab="tab-satellites" role="tab" aria-selected="false">
+        🚀 8 Vệ Tinh
+      </button>
+    </nav>
+  </header>
+
+  <main class="app-main">
+    <!-- TAB 1: TRA CỨU NHANH 30S & KHO PROMPT AI -->
+    <section id="tab-search" class="tab-panel is-active" role="tabpanel">
+      <div class="search-box">
+        <input
+          id="quick-search-input"
+          type="search"
+          placeholder="Gõ lỗi Excel, lệnh CMD, Prompt AI, VNeID..."
+          autocomplete="off"
+        />
+        <div class="filter-pills" id="category-filters">
+          <button type="button" class="chip is-active" data-cat="all">Tất cả</button>
+          <button type="button" class="chip" data-cat="ai">🤖 AI &amp; Prompt</button>
+          <button type="button" class="chip" data-cat="office">📊 Văn phòng</button>
+          <button type="button" class="chip" data-cat="os">💻 Win/Mac</button>
+          <button type="button" class="chip" data-cat="life">🏛️ Đời sống số</button>
+        </div>
+      </div>
+
+      <div id="cards-container" class="cards-list"></div>
+
+      <div class="web-search-bridge">
+        <button type="button" id="btn-full-web-search" class="btn-outline-full">
+          🔍 Tìm kiếm sâu trên kho 9.449+ bài Thủ Thuật Việt ↗
+        </button>
+      </div>
+    </section>
+
+    <!-- TAB 2: 4 MICRO-TOOLS CÔNG SỞ TỐC HÀNH (CHẠY OFFLINE 100%) -->
+    <section id="tab-tools" class="tab-panel" role="tabpanel">
+      <!-- Tool 1: Excel Formula Delimiter & VNĐ Words -->
+      <article class="tool-card">
+        <div class="tool-head">
+          <span class="tool-badge">📊 Công cụ #1</span>
+          <h2>Sửa Hàm Excel (, ⇄ ;) &amp; Đọc Số Tiền VNĐ</h2>
+        </div>
+        <input
+          id="excel-input"
+          type="text"
+          class="mono-input"
+          value='=XLOOKUP(A2, Bang!A:A, Bang!B:B, "Chưa có, kiểm tra", 0)'
+          placeholder="Dán hàm Excel hoặc nhập số tiền VNĐ..."
+        />
+        <div class="btn-row">
+          <button type="button" id="btn-excel-semi" class="btn-primary">Đổi , ➔ ; (Chuẩn VN)</button>
+          <button type="button" id="btn-excel-comma" class="btn-secondary">Đổi ; ➔ ,</button>
+          <button type="button" id="btn-excel-vnd" class="btn-secondary">Đọc số VNĐ</button>
+        </div>
+        <div class="result-wrap">
+          <pre id="excel-output" class="result-code">=XLOOKUP(A2; Bang!A:A; Bang!B:B; "Chưa có, kiểm tra"; 0)</pre>
+          <button type="button" class="btn-copy" data-copy-target="excel-output">📋 Sao chép</button>
+        </div>
+      </article>
+
+      <!-- Tool 2: Lương Gross -> Net Mini -->
+      <article class="tool-card">
+        <div class="tool-head">
+          <span class="tool-badge">🧮 Công cụ #2</span>
+          <h2>Tính Nhanh Lương Gross ➔ Net &amp; BHXH 10.5%</h2>
+        </div>
+        <div class="two-col">
+          <div>
+            <label for="gross-input">Lương Gross (VNĐ):</label>
+            <input id="gross-input" type="text" class="mono-input" value="20000000" />
+          </div>
+          <div>
+            <label for="dep-select">Người phụ thuộc:</label>
+            <select id="dep-select" class="select-input">
+              <option value="0">0 người (11tr)</option>
+              <option value="1">1 người (15.4tr)</option>
+              <option value="2">2 người (19.8tr)</option>
+              <option value="3">3 người (24.2tr)</option>
+            </select>
+          </div>
+        </div>
+        <button type="button" id="btn-calc-salary" class="btn-primary w-full">🧮 Tính Lương Thực Nhận (Net)</button>
+        <div class="result-wrap">
+          <pre id="salary-output" class="result-code"></pre>
+          <div class="bridge-row">
+            <button type="button" class="btn-copy" data-copy-target="salary-output">📋 Copy</button>
+            <a href="https://tinhluonggrossnet.vn" target="_blank" rel="noopener noreferrer" class="sat-link">
+              Xem bảng 7 bậc thuế tại TinhLuongGrossNet.vn ↗
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tool 3: Chuẩn Hóa Văn Bản & Bảng Mã Tiếng Việt -->
+      <article class="tool-card">
+        <div class="tool-head">
+          <span class="tool-badge">⚡ Công cụ #3</span>
+          <h2>Chuẩn Hóa Unicode (NFC), Bỏ Dấu &amp; Hoa Đầu Từ</h2>
+        </div>
+        <input
+          id="text-input"
+          type="text"
+          class="mono-input"
+          value="  nguyễn   thị  minh  khai — báo cáo tổng kết năm  "
+          placeholder="Dán văn bản cần chuẩn hóa..."
+        />
+        <div class="btn-row">
+          <button type="button" id="btn-text-title" class="btn-primary">Hoa Đầu Từ + NFC</button>
+          <button type="button" id="btn-text-ascii" class="btn-secondary">Bỏ dấu</button>
+          <button type="button" id="btn-text-slug" class="btn-secondary">Tạo Slug</button>
+        </div>
+        <div class="result-wrap">
+          <pre id="text-output" class="result-code">Nguyễn Thị Minh Khai — Báo Cáo Tổng Kết Năm</pre>
+          <button type="button" class="btn-copy" data-copy-target="text-output">📋 Sao chép</button>
+        </div>
+      </article>
+
+      <!-- Tool 4: Tạo Chuỗi QR Wi-Fi & Kiểm Tra Mật Khẩu -->
+      <article class="tool-card">
+        <div class="tool-head">
+          <span class="tool-badge">📱 Công cụ #4</span>
+          <h2>Tạo Chuỗi QR Wi-Fi &amp; Chấm Điểm Mật Khẩu</h2>
+        </div>
+        <input
+          id="wifi-input"
+          type="text"
+          class="mono-input"
+          value="CafeThuThuatViet|88889999"
+          placeholder="TênWiFi|MậtKhẩu hoặc mật khẩu cần kiểm tra..."
+        />
+        <div class="btn-row">
+          <button type="button" id="btn-wifi-qr" class="btn-primary">Chuỗi QR Wi-Fi</button>
+          <button type="button" id="btn-pass-check" class="btn-secondary">Độ mạnh Mật khẩu</button>
+        </div>
+        <div class="result-wrap">
+          <pre id="wifi-output" class="result-code">WIFI:S:CafeThuThuatViet;T:WPA;P:88889999;;</pre>
+          <div class="bridge-row">
+            <button type="button" class="btn-copy" data-copy-target="wifi-output">📋 Copy</button>
+            <a href="https://taomaqr.online" target="_blank" rel="noopener noreferrer" class="sat-link">
+              Tải ảnh QR PNG/SVG nét căng tại TaoMaQR.online ↗
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tool 5: Tách Họ và Tên Excel -->
+      <article class="tool-card">
+        <div class="tool-head">
+          <span class="tool-badge">📊 Công cụ #5</span>
+          <h2>Tách Họ &amp; Tên Trong Excel Thành 2-3 Cột Sắp Xếp A-Z</h2>
+        </div>
+        <textarea
+          id="name-input"
+          class="mono-input"
+          rows="3"
+          placeholder="Dán danh sách họ và tên (mỗi người 1 dòng)..."
+        >Nguyễn Văn An
+Trần Thị Thu Trang
+Lê Hoàng Nam</textarea>
+        <div class="btn-row">
+          <button type="button" id="btn-name-2col" class="btn-primary">Tách 2 Cột (Họ đệm + Tên)</button>
+          <button type="button" id="btn-name-3col" class="btn-secondary">Tách 3 Cột (Họ + Đệm + Tên)</button>
+        </div>
+        <div class="result-wrap">
+          <pre id="name-output" class="result-code"></pre>
+          <button type="button" class="btn-copy" data-copy-target="name-output">📋 Copy (Dán thẳng vào Excel)</button>
+        </div>
+      </article>
+
+      <!-- Tool 6: Dọn Rác & Tối Ưu Win 10/11 -->
+      <article class="tool-card">
+        <div class="tool-head">
+          <span class="tool-badge">💻 Công cụ #6</span>
+          <h2>Tạo Kịch Bản Dọn Rác &amp; Tối Ưu Win 10/11 (.bat 1-Click)</h2>
+        </div>
+        <div class="btn-row">
+          <button type="button" id="btn-clean-full" class="btn-primary">Dọn Rác Toàn Diện</button>
+          <button type="button" id="btn-clean-c" class="btn-secondary">Cứu Nguy Ổ C Đỏ (Tắt Sleep/Hibernate)</button>
+          <button type="button" id="btn-clean-net" class="btn-secondary">Sửa Mạng / Flush DNS</button>
+        </div>
+        <div class="result-wrap">
+          <pre id="clean-output" class="result-code"></pre>
+          <button type="button" class="btn-copy" data-copy-target="clean-output">📋 Copy Lệnh Batch (.bat)</button>
+        </div>
+      </article>
+
+      <!-- Tool 7: Tạo Link Chat Zalo Trực Tiếp -->
+      <article class="tool-card">
+        <div class="tool-head">
+          <span class="tool-badge">📱 Công cụ #7</span>
+          <h2>Tạo Link Chat Zalo 1-Chạm Không Cần Kết Bạn</h2>
+        </div>
+        <input
+          id="zalo-input"
+          type="text"
+          class="mono-input"
+          value="0988123456"
+          placeholder="Nhập số điện thoại (VD: 0988123456)..."
+        />
+        <div class="btn-row">
+          <button type="button" id="btn-zalo-link" class="btn-primary">Tạo Link Chat Zalo</button>
+          <button type="button" id="btn-zalo-carrier" class="btn-secondary">Tra Cứu Nhà Mạng</button>
+        </div>
+        <div class="result-wrap">
+          <pre id="zalo-output" class="result-code"></pre>
+          <button type="button" class="btn-copy" data-copy-target="zalo-output">📋 Copy Link</button>
+        </div>
+      </article>
+
+      <!-- Tool 8: Bảng Tính Lãi Vay Ngân Hàng -->
+      <article class="tool-card">
+        <div class="tool-head">
+          <span class="tool-badge">🏦 Công cụ #8</span>
+          <h2>Bảng Tính Lãi Vay: Dư Nợ Giảm Dần vs Lãi Phẳng</h2>
+        </div>
+        <input
+          id="loan-input"
+          type="text"
+          class="mono-input"
+          value="500000000 * 36 * 8.5"
+          placeholder="[SốTiềnVay] * [SốTháng] * [LãiSuất%/Năm]..."
+        />
+        <div class="btn-row">
+          <button type="button" id="btn-loan-reducing" class="btn-primary">Dư Nợ Giảm Dần (Chuẩn)</button>
+          <button type="button" id="btn-loan-compare" class="btn-secondary">So Sánh 2 Cách Tính</button>
+        </div>
+        <div class="result-wrap">
+          <pre id="loan-output" class="result-code"></pre>
+          <button type="button" class="btn-copy" data-copy-target="loan-output">📋 Copy Bảng Tính</button>
+        </div>
+      </article>
+
+      <!-- Tool 9: Chuyển Đổi Hệ Màu Đồ Họa & Thẩm Định WCAG -->
+      <article class="tool-card">
+        <div class="tool-head">
+          <span class="tool-badge">🎨 Công cụ #9</span>
+          <h2>Chuyển Đổi Màu (HEX ➔ RGB ➔ CMYK) &amp; Thẩm Định WCAG 2.1</h2>
+        </div>
+        <input
+          id="color-input"
+          type="text"
+          class="mono-input"
+          value="#10B981"
+          placeholder="Nhập mã HEX (VD: #10B981) hoặc RGB..."
+        />
+        <div class="btn-row">
+          <button type="button" id="btn-color-all" class="btn-primary">Toàn Diện (WCAG)</button>
+          <button type="button" id="btn-color-cmyk" class="btn-secondary">CMYK In Ấn</button>
+          <button type="button" id="btn-color-harmonic" class="btn-secondary">Phối Màu</button>
+        </div>
+        <div class="result-wrap">
+          <pre id="color-output" class="result-code"></pre>
+          <div class="bridge-row">
+            <button type="button" class="btn-copy" data-copy-target="color-output">📋 Copy</button>
+            <a href="https://quickpsd.com" target="_blank" rel="noopener noreferrer" class="sat-link">
+              Tải Mockup PSD &amp; Font Việt hóa tại QuickPSD.com ↗
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tool 10: Tính Nguồn PSU & Thẩm Định Bottleneck -->
+      <article class="tool-card">
+        <div class="tool-head">
+          <span class="tool-badge">⚡ Công cụ #10</span>
+          <h2>Tính Công Suất Nguồn PSU PC &amp; Nghẽn Cổ Chai CPU-GPU</h2>
+        </div>
+        <input
+          id="psu-input"
+          type="text"
+          class="mono-input"
+          value="i5 13400 + RTX 4060"
+          placeholder="Nhập combo CPU + GPU (VD: i5 13400 + RTX 4060)..."
+        />
+        <div class="btn-row">
+          <button type="button" id="btn-psu-calc" class="btn-primary">Tính Công Suất Nguồn</button>
+          <button type="button" id="btn-psu-1080p" class="btn-secondary">Nghẽn 1080p</button>
+          <button type="button" id="btn-psu-2k4k" class="btn-secondary">Nghẽn 2K/4K</button>
+        </div>
+        <div class="result-wrap">
+          <pre id="psu-output" class="result-code"></pre>
+          <div class="bridge-row">
+            <button type="button" class="btn-copy" data-copy-target="psu-output">📋 Copy</button>
+            <a href="https://vongquaymayman.web.app" target="_blank" rel="noopener noreferrer" class="sat-link">
+              Tạo vòng quay bốc thăm may mắn tại VongQuayMayMan ↗
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tool 11: Tính Thuế VAT & Hóa Đơn Điện Tử -->
+      <article class="tool-card">
+        <div class="tool-head">
+          <span class="tool-badge">🧾 Công cụ #11</span>
+          <h2>Máy Tính Thuế VAT (8% / 10%) &amp; Bóc Tách Hóa Đơn Điện Tử</h2>
+        </div>
+        <input
+          id="vat-input"
+          type="text"
+          class="mono-input"
+          value="10800000"
+          placeholder="Nhập số tiền hóa đơn hoặc MST (VD: 10800000 hoặc 0100109106)..."
+        />
+        <div class="btn-row">
+          <button type="button" id="btn-vat-extract-8" class="btn-primary">Tách VAT 8% (Gross➔Net)</button>
+          <button type="button" id="btn-vat-extract-10" class="btn-secondary">Tách VAT 10%</button>
+          <button type="button" id="btn-vat-add-8" class="btn-secondary">Thêm VAT 8%</button>
+          <button type="button" id="btn-vat-mst" class="btn-secondary">Kiểm tra MST</button>
+        </div>
+        <div class="result-wrap">
+          <pre id="vat-output" class="result-code"></pre>
+          <div class="bridge-row">
+            <button type="button" class="btn-copy" data-copy-target="vat-output">📋 Copy</button>
+            <a href="https://tinhluonggrossnet.vn" target="_blank" rel="noopener noreferrer" class="sat-link">
+              Bảng tính lương Gross Net chuẩn &amp; Thuế TNCN tại TinhLuongGrossNet ↗
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- TAB 3: MA TRẬN 8 WEBSITE VỆ TINH CỐT LÕI -->
+    <section id="tab-satellites" class="tab-panel" role="tabpanel">
+      <p class="sat-intro">
+        Hệ sinh thái <strong>8 Công Cụ Thực Chiến 100% Miễn Phí</strong> đồng hành cùng Thủ Thuật Việt:
+      </p>
+      <div id="satellites-grid" class="sat-grid"></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <span>© 2026 Thủ Thuật Việt (thuthuatviet.com)</span>
+    <span>Tìm là Làm được ngay</span>
+  </footer>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
