@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Thủ Thuật Việt — Trợ Lý Công Sở & AI Tốc Hành 60s",
+  "version": "2.0.0",
+  "description": "Tra cứu giải pháp 30s, kho Prompt AI tiếng Việt, sửa lỗi Excel, dọn rác Win 11, tạo link Zalo & tính lãi vay ngân hàng.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "Mở Trợ Lý Thủ Thuật Việt 60s (Side Panel)",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "permissions": [
+    "sidePanel",
+    "storage",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://thuthuatviet.com/*"
+  ]
+}
