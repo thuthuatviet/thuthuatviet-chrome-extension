@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thủ Thuật Việt Open Tools &amp; Chrome Extension v2.0 — 30 Công Cụ Văn Phòng &amp; AI Miễn Phí</title>
+  <meta name="description" content="Kho mã nguồn mở Thủ Thuật Việt Chrome Extension v2.0 &amp; Hub 30 công cụ văn phòng, sửa lỗi Excel, VietQR Napas 247, Prompt AI và 30 hướng dẫn thực chiến miễn phí tại thuthuatviet.com." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://thuthuatviet.github.io/thuthuatviet-chrome-extension/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Thủ Thuật Việt Open Tools &amp; Chrome Extension v2.0" />
+  <meta property="og:description" content="Giải Pháp Nhanh — Công Cụ Thực — Trải Nghiệm Chuẩn — 100% Miễn Phí từ hệ sinh thái thuthuatviet.com." />
+  <meta property="og:url" content="https://thuthuatviet.github.io/thuthuatviet-chrome-extension/" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Thủ Thuật Việt Chrome Extension v2.0","applicationCategory":"BrowserApplication","operatingSystem":"Windows, macOS, Linux, ChromeOS","url":"https://thuthuatviet.com/tien-ich-chrome/","downloadUrl":"https://github.com/thuthuatviet/thuthuatviet-chrome-extension","offers":{"@type":"Offer","price":"0","priceCurrency":"VND"},"publisher":{"@type":"Organization","name":"Thủ Thuật Việt","url":"https://thuthuatviet.com/"}}</script>
+  <style>
+    :root { --bg:#0b0f19; --card:#111827; --border:#1f2937; --text:#f8fafc; --muted:#94a3b8; --emerald:#10b981; --amber:#f59e0b; --sky:#38bdf8; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+    a { color:var(--emerald); text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .wrap { max-width:1040px; margin:0 auto; padding:32px 20px 64px; }
+    .hero { background:linear-gradient(135deg,#0f172a 0%,#064e3b 100%); border:1px solid #1e293b; border-radius:20px; padding:36px 28px; margin-bottom:28px; }
+    .badge { display:inline-block; background:rgba(16,185,129,.18); color:#6ee7b7; border:1px solid rgba(16,185,129,.4); padding:4px 12px; border-radius:999px; font-size:13px; font-weight:600; margin-bottom:12px; }
+    h1 { margin:0 0 12px; font-size:clamp(26px,4vw,36px); line-height:1.25; }
+    .lead { color:#cbd5e1; max-width:780px; margin:0 0 22px; font-size:16px; }
+    .btn-row { display:flex; flex-wrap:wrap; gap:12px; }
+    .btn { display:inline-flex; align-items:center; gap:6px; padding:11px 18px; border-radius:10px; font-weight:600; font-size:14px; transition:transform .15s ease; }
+    .btn:hover { transform:translateY(-1px); text-decoration:none; }
+    .btn-primary { background:var(--emerald); color:#052e16; }
+    .btn-secondary { background:#1e293b; color:var(--text); border:1px solid #334155; }
+    .btn-amber { background:#78350f; color:#fef3c7; border:1px solid #b45309; }
+    h2 { margin:34px 0 14px; font-size:22px; border-left:4px solid var(--emerald); padding-left:12px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; }
+    .card { display:block; background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px; color:var(--text); }
+    .card:hover { border-color:var(--emerald); text-decoration:none; }
+    .card-title { font-weight:700; font-size:16px; margin-bottom:6px; color:#fff; }
+    .card-desc { margin:0 0 10px; font-size:13.5px; color:var(--muted); }
+    .card-cta { font-size:13px; font-weight:600; color:var(--emerald); }
+    .cluster-box { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px 20px; margin-bottom:14px; }
+    .cluster-box h3 { margin:0 0 10px; font-size:16px; color:#e2e8f0; }
+    .cluster-box h3 span { color:var(--sky); font-family:ui-monospace,monospace; }
+    ul { margin:0; padding-left:20px; }
+    li { margin-bottom:6px; font-size:14.5px; }
+    .anchor-note { color:var(--muted); font-size:13px; }
+    footer { margin-top:44px; padding-top:20px; border-top:1px solid var(--border); font-size:13.5px; color:var(--muted); text-align:center; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="badge">Manifest V3 &bull; 100% Client-Side &bull; Open Source MIT</div>
+      <h1>⚡ Thủ Thuật Việt Open Tools &amp; Chrome Extension v2.0</h1>
+      <p class="lead">
+        Trợ lý công sở &amp; AI tốc hành 60 giây tích hợp trực tiếp trên Chrome Side Panel.
+        Phát hành miễn phí bởi <a href="https://thuthuatviet.com/" target="_blank" rel="noopener"><strong>Thủ Thuật Việt (thuthuatviet.com)</strong></a> —
+        nền tảng tra cứu thủ thuật thực chiến hàng đầu cho người Việt.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://thuthuatviet.com/" target="_blank" rel="noopener">🏠 Trang chủ Thủ Thuật Việt</a>
+        <a class="btn btn-secondary" href="https://thuthuatviet.com/cong-cu/" target="_blank" rel="noopener">🛠️ 30 Công Cụ Văn Phòng 60s</a>
+        <a class="btn btn-amber" href="https://thuthuatviet.com/kho-do/" target="_blank" rel="noopener">🛒 Kho Đồ Công Nghệ Tuyển Chọn</a>
+        <a class="btn btn-secondary" href="https://thuthuatviet.com/tien-ich-chrome/" target="_blank" rel="noopener">🧩 Tải Chrome Extension</a>
+        <a class="btn btn-secondary" href="https://github.com/thuthuatviet/thuthuatviet-chrome-extension" target="_blank" rel="noopener">💻 Mã Nguồn GitHub</a>
+      </div>
+    </section>
+
+    <h2>🗂️ 8 Chuyên Mục Thủ Thuật Trọng Tâm</h2>
+    <section class="grid">
+
+      <a class="card" href="https://thuthuatviet.com/tri-tue-nhan-tao/" target="_blank" rel="noopener">
+        <div class="card-title">🤖 Trí tuệ nhân tạo (AI)</div>
+        <p class="card-desc">ChatGPT, Claude, Gemini, DeepSeek, kho Prompt thực chiến &amp; Workflow tự động hóa.</p>
+        <span class="card-cta">Xem thủ thuật &rarr;</span>
+      </a>
+
+      <a class="card" href="https://thuthuatviet.com/van-phong/" target="_blank" rel="noopener">
+        <div class="card-title">📊 Tin học văn phòng</div>
+        <p class="card-desc">Excel, Google Sheets, Word, PowerPoint và chuẩn văn bản Nghị định 30/2020/NĐ-CP.</p>
+        <span class="card-cta">Xem thủ thuật &rarr;</span>
+      </a>
+
+      <a class="card" href="https://thuthuatviet.com/he-dieu-hanh/" target="_blank" rel="noopener">
+        <div class="card-title">💻 Hệ điều hành</div>
+        <p class="card-desc">Thủ thuật Windows 11/10, macOS, sửa lỗi phần cứng và tối ưu hiệu suất máy.</p>
+        <span class="card-cta">Xem thủ thuật &rarr;</span>
+      </a>
+
+      <a class="card" href="https://thuthuatviet.com/di-dong/" target="_blank" rel="noopener">
+        <div class="card-title">📱 Di động &amp; Zalo</div>
+        <p class="card-desc">Mẹo iPhone, Android, tiết kiệm pin, tối ưu 4G và thủ thuật Zalo PC/Mobile.</p>
+        <span class="card-cta">Xem thủ thuật &rarr;</span>
+      </a>
+
+      <a class="card" href="https://thuthuatviet.com/mang-bao-mat/" target="_blank" rel="noopener">
+        <div class="card-title">🛡️ Mạng &amp; Bảo mật</div>
+        <p class="card-desc">Sửa lỗi Wi-Fi, tăng tốc mạng, phòng chống lừa đảo và bảo vệ tài khoản ngân hàng.</p>
+        <span class="card-cta">Xem thủ thuật &rarr;</span>
+      </a>
+
+      <a class="card" href="https://thuthuatviet.com/phan-mem/" target="_blank" rel="noopener">
+        <div class="card-title">⚡ Phần mềm &amp; Tiện ích</div>
+        <p class="card-desc">Bộ gõ tiếng Việt (Unikey/EVKey), font Việt hóa, đồ họa – video và Giveaway bản quyền.</p>
+        <span class="card-cta">Xem thủ thuật &rarr;</span>
+      </a>
+
+      <a class="card" href="https://thuthuatviet.com/doi-song-so/" target="_blank" rel="noopener">
+        <div class="card-title">🏛️ Đời sống số &amp; Dịch vụ công</div>
+        <p class="card-desc">VNeID mức 2, eTax Mobile, Cổng Dịch vụ công Quốc gia và ngân hàng số.</p>
+        <span class="card-cta">Xem thủ thuật &rarr;</span>
+      </a>
+
+      <a class="card" href="https://thuthuatviet.com/gaming-giai-tri/" target="_blank" rel="noopener">
+        <div class="card-title">🎮 Gaming &amp; Giải trí công nghệ</div>
+        <p class="card-desc">Tính công suất nguồn PSU, tối ưu FPS cho máy yếu, giả lập và thiết bị giải trí.</p>
+        <span class="card-cta">Xem thủ thuật &rarr;</span>
+      </a>
+    </section>
+
+    <h2>📌 30 Hướng Dẫn &amp; Trang Đích Trụ Cột (Pillar Guides)</h2>
+
+      <div class="cluster-box">
+        <h3>Cụm đồng hành: <span>tinhluonggrossnet.vn</span></h3>
+        <ul>
+          <li><a href="https://thuthuatviet.com/van-phong/cach-tinh-va-boc-tach-thue-vat-8-va-10-phan-tram-chuan-hoa-don-dien-tu/" target="_blank" rel="noopener">Cách Tính và Bóc Tách Thuế VAT 8% và 10% Chuẩn Hóa Đơn Điện Tử</a> <span class="anchor-note">(cách tính và bóc tách thuế VAT 8% – 10% chuẩn hóa đơn điện tử)</span></li>
+          <li><a href="https://thuthuatviet.com/tri-tue-nhan-tao/bo-prompt-deepseek-r1-ke-toan-nhan-su-tinh-luong-excel/" target="_blank" rel="noopener">Bộ Prompt DeepSeek-R1 Chuẩn Cho Dân Kế Toán &amp; Nhân Sự: Tính Lương, Bảng Thuế Và Xử Lý Dữ Liệu Excel</a> <span class="anchor-note">(bộ Prompt AI tính lương, thuế và xử lý Excel cho kế toán – nhân sự)</span></li>
+          <li><a href="https://thuthuatviet.com/doi-song-so/chi-tiet-cach-tinh-thue-tncn-2026-qua-etax-mobile-tinh-tncn-tren-excel/" target="_blank" rel="noopener">Chi tiết cách tính thuế TNCN 2026 qua eTax Mobile, tính TNCN trên Excel</a> <span class="anchor-note">(hướng dẫn tính thuế TNCN qua eTax Mobile và Excel)</span></li>
+          <li><a href="https://thuthuatviet.com/van-phong/bang-tinh-luong-gross-sang-net-excel-chuan-thue-tncn/" target="_blank" rel="noopener">Bảng tính Excel chuyển đổi lương Gross sang Net chuẩn mức giảm trừ gia cảnh 11 triệu</a> <span class="anchor-note">(bảng Excel quy đổi lương Gross sang Net chuẩn thuế TNCN)</span></li>
+        </ul>
+      </div>
+
+      <div class="cluster-box">
+        <h3>Cụm đồng hành: <span>taomaqr.online</span></h3>
+        <ul>
+          <li><a href="https://thuthuatviet.com/cong-cu/#vietqr-fast-generator" target="_blank" rel="noopener">Hộp Đồ Nghề 30 Tiện Ích Văn Phòng &amp; Tạo VietQR Napas 247 Nhanh</a> <span class="anchor-note">(công cụ tạo VietQR Napas 247 &amp; sửa lỗi Excel miễn phí)</span></li>
+          <li><a href="https://thuthuatviet.com/phan-mem/tao-ma-qr-wifi-quan-cafe-tu-dong-ket-noi/" target="_blank" rel="noopener">Cách tạo mã QR WiFi cho quán cafe, cửa hàng tự động kết nối không cần nhập mật khẩu</a> <span class="anchor-note">(cách tạo mã QR WiFi tự động kết nối cho quán cafe và văn phòng)</span></li>
+          <li><a href="https://thuthuatviet.com/mang-bao-mat/quen-mat-khau-wifi-da-luu-day-la-cach-xem-mat-khau-wifi-tren-may-tinh/" target="_blank" rel="noopener">Quên mật khẩu Wifi đã lưu? Đây là cách xem mật khẩu Wifi trên máy tính</a> <span class="anchor-note">(cách xem lại mật khẩu WiFi đã lưu trên máy tính Windows)</span></li>
+          <li><a href="https://thuthuatviet.com/mang-bao-mat/mot-vai-cach-cai-thien-duong-truyen-wi-fi-tang-toc-wifi/" target="_blank" rel="noopener">Một vài cách cải thiện đường truyền Wi-Fi, tăng tốc WiFi</a> <span class="anchor-note">(mẹo cải thiện tốc độ Wi-Fi ổn định hơn tại nhà)</span></li>
+        </ul>
+      </div>
+
+      <div class="cluster-box">
+        <h3>Cụm đồng hành: <span>quickpsd.com</span></h3>
+        <ul>
+          <li><a href="https://thuthuatviet.com/phan-mem/quy-chuan-he-mau-rgb-va-cmyk-trong-in-an/" target="_blank" rel="noopener">Quy chuẩn hệ màu RGB và CMYK trong thiết kế &amp; in ấn chuyên nghiệp</a> <span class="anchor-note">(quy chuẩn chuyển đổi hệ màu RGB và CMYK không bị lệch màu in)</span></li>
+          <li><a href="https://thuthuatviet.com/tri-tue-nhan-tao/10-prompt-ai-tao-anh-avatar-cv-linkedin-chuan-cong-so/" target="_blank" rel="noopener">10 Prompt AI tạo ảnh đại diện CV, LinkedIn và Zalo chuẩn thanh lịch công sở</a> <span class="anchor-note">(10 câu lệnh Prompt AI tạo ảnh đại diện CV và LinkedIn chuyên nghiệp)</span></li>
+          <li><a href="https://thuthuatviet.com/tri-tue-nhan-tao/prompt-anh-10-prompt-tao-anh-profile-linkedin-chuyen-nghiep-xem-prompt/" target="_blank" rel="noopener">Prompt Ảnh 10 prompt tạo ảnh profile LinkedIn chuyên nghiệp</a> <span class="anchor-note">(mẫu Prompt tạo ảnh chân dung 8K sắc nét)</span></li>
+          <li><a href="https://thuthuatviet.com/tri-tue-nhan-tao/prompt-anh/" target="_blank" rel="noopener">Kho Tiện Ích &amp; Prompt Thiết Kế AI Tại Thủ Thuật Việt</a> <span class="anchor-note">(kho Prompt tạo ảnh AI &amp; tài nguyên đồ họa thực chiến)</span></li>
+        </ul>
+      </div>
+
+      <div class="cluster-box">
+        <h3>Cụm đồng hành: <span>lichampro.com</span></h3>
+        <ul>
+          <li><a href="https://thuthuatviet.com/doi-song-so/cach-tich-hop-giay-phep-lai-xe-gplx-vao-vneid-muc-2-thanh-cong-100/" target="_blank" rel="noopener">Cách Tích Hợp Giấy Phép Lái Xe (GPLX) Vào VNeID Mức 2 Thành Công 100%</a> <span class="anchor-note">(cách tích hợp giấy phép lái xe vào VNeID mức 2 không bị lỗi)</span></li>
+          <li><a href="https://thuthuatviet.com/doi-song-so/cach-cap-nhat-so-cccd-tren-cong-dich-vu-cong-quoc-gia/" target="_blank" rel="noopener">Cách cập nhật số CCCD trên Cổng Dịch vụ công Quốc gia</a> <span class="anchor-note">(hướng dẫn cập nhật số CCCD trên Cổng Dịch vụ công Quốc gia)</span></li>
+          <li><a href="https://thuthuatviet.com/doi-song-so/cach-tich-hop-ho-chieu-vao-vneid/" target="_blank" rel="noopener">Cách tích hợp hộ chiếu vào VNeID</a> <span class="anchor-note">(cách tích hợp hộ chiếu điện tử vào VNeID nhanh gọn)</span></li>
+          <li><a href="https://thuthuatviet.com/doi-song-so/" target="_blank" rel="noopener">Chuyên mục Đời sống số &amp; Dịch vụ công trực tuyến</a> <span class="anchor-note">(cẩm nang VNeID, CCCD và dịch vụ công tại thuthuatviet.com)</span></li>
+        </ul>
+      </div>
+
+      <div class="cluster-box">
+        <h3>Cụm đồng hành: <span>vongquaymayman.web.app</span></h3>
+        <ul>
+          <li><a href="https://thuthuatviet.com/tri-tue-nhan-tao/so-sanh-google-gemini-4-argon-va-openai-gpt-6-astra-2026/" target="_blank" rel="noopener">So sánh Google Gemini 4 Argon và OpenAI GPT-6 Astra 2026</a> <span class="anchor-note">(đánh giá chi tiết Gemini và ChatGPT thế hệ mới cho công việc)</span></li>
+          <li><a href="https://thuthuatviet.com/tri-tue-nhan-tao/khi-nao-nen-dung-chatgpt-claude-hay-gemini/" target="_blank" rel="noopener">Khi nào nên dùng ChatGPT, Claude hay Gemini?</a> <span class="anchor-note">(cách chọn đúng AI (ChatGPT, Claude hay Gemini) cho từng đầu việc)</span></li>
+          <li><a href="https://thuthuatviet.com/tri-tue-nhan-tao/10-meo-su-dung-chatgpt-hieu-qua-ma-ban-nen-biet/" target="_blank" rel="noopener">10 mẹo sử dụng ChatGPT hiệu quả mà bạn nên biết</a> <span class="anchor-note">(10 mẹo dùng ChatGPT viết kịch bản và xử lý công việc nhanh)</span></li>
+        </ul>
+      </div>
+
+      <div class="cluster-box">
+        <h3>Cụm đồng hành: <span>daodaoreview.com</span></h3>
+        <ul>
+          <li><a href="https://thuthuatviet.com/gaming-giai-tri/cach-tinh-cong-suat-nguon-psu-va-chong-nghen-co-chai-cpu-gpu/" target="_blank" rel="noopener">Cách Tính Công Suất Nguồn PSU và Chống Nghẽn Cổ Chai CPU–GPU</a> <span class="anchor-note">(cách tính công suất nguồn PSU và kiểm tra nghẽn cổ chai PC)</span></li>
+          <li><a href="https://thuthuatviet.com/gaming-giai-tri/huong-dan-toi-uu-card-onboard-intel-uhd-choi-game-khong-lag/" target="_blank" rel="noopener">Hướng Dẫn Tối Ưu Card Onboard Intel UHD Graphics: Tăng 20-30 FPS Chơi Game Mượt</a> <span class="anchor-note">(cách tối ưu card onboard Intel UHD tăng 20–30 FPS không lag)</span></li>
+          <li><a href="https://thuthuatviet.com/gaming-giai-tri/mot-so-meo-tang-fps-trong-khi-choi-game-tren-laptop/" target="_blank" rel="noopener">Một số mẹo tăng FPS trong khi chơi game trên laptop</a> <span class="anchor-note">(mẹo tăng FPS và giảm giật lag khi chơi game trên laptop)</span></li>
+          <li><a href="https://thuthuatviet.com/gaming-giai-tri/uu-va-nhuoc-diem-cua-viec-choi-game-tren-trinh-gia-lap/" target="_blank" rel="noopener">Ưu và nhược điểm của việc chơi game trên trình giả lập</a> <span class="anchor-note">(kinh nghiệm chọn và tối ưu trình giả lập game trên PC)</span></li>
+        </ul>
+      </div>
+
+      <div class="cluster-box">
+        <h3>Cụm đồng hành: <span>angicungduoc.food</span></h3>
+        <ul>
+          <li><a href="https://thuthuatviet.com/kho-do/" target="_blank" rel="noopener">Kho Đồ Công Nghệ &amp; Tiện Ích Đáng Mua Nhất Cho Dân Văn Phòng</a> <span class="anchor-note">(Top 20 món đồ công nghệ &amp; tiện ích văn phòng tại Kho Đồ Thủ Thuật Việt)</span></li>
+          <li><a href="https://thuthuatviet.com/van-phong/soan-thao-van-ban-hanh-chinh-chuan-nghi-dinh-30-2020-word/" target="_blank" rel="noopener">Quy chuẩn soạn thảo văn bản hành chính theo Nghị định 30/2020/NĐ-CP trên Microsoft Word</a> <span class="anchor-note">(chuẩn soạn thảo văn bản Nghị định 30/2020/NĐ-CP trên Word)</span></li>
+          <li><a href="https://thuthuatviet.com/van-phong/10-meo-dan-van-ban-trong-microsoft-word-giup-ban-tranh-khoi-con-ac-mong-dinh-dang/" target="_blank" rel="noopener">10 mẹo dán văn bản trong Microsoft Word giúp bạn tránh khỏi cơn ác mộng định dạng</a> <span class="anchor-note">(10 mẹo dán văn bản trong Word không bị vỡ font định dạng)</span></li>
+          <li><a href="https://thuthuatviet.com/cong-cu/" target="_blank" rel="noopener">Hộp Đồ Nghề 30 Tiện Ích Văn Phòng Miễn Phí 60s</a> <span class="anchor-note">(bộ 30 tiện ích văn phòng &amp; AI chạy ngay trên trình duyệt)</span></li>
+        </ul>
+      </div>
+
+      <div class="cluster-box">
+        <h3>Cụm đồng hành: <span>sapaview.vn / laocaiview.vn</span></h3>
+        <ul>
+          <li><a href="https://thuthuatviet.com/doi-song-so/cach-dang-ky-3g4g-viettel-mobifone-vinaphone-qua-zalopay/" target="_blank" rel="noopener">Cách đăng ký 3G/4G Viettel, MobiFone, VinaPhone qua ZaloPay</a> <span class="anchor-note">(cách đăng ký gói cước 4G Viettel, MobiFone, VinaPhone nhanh khi đi du lịch)</span></li>
+          <li><a href="https://thuthuatviet.com/di-dong/" target="_blank" rel="noopener">Chuyên mục Thủ thuật Di động, Pin iPhone/Android &amp; Zalo</a> <span class="anchor-note">(mẹo tiết kiệm pin, tối ưu sóng 4G và chụp ảnh đẹp trên điện thoại)</span></li>
+          <li><a href="https://thuthuatviet.com/di-dong/tao-anh-avatar-facebook-voi-5-ung-dung-truc-tuyen/" target="_blank" rel="noopener">Tạo ảnh Avatar Facebook với 5 ứng dụng trực tuyến</a> <span class="anchor-note">(mẹo chỉnh sửa ảnh du lịch và ảnh đại diện đẹp ngay trên điện thoại)</span></li>
+        </ul>
+      </div>
+
+    <h2>🌐 Hệ Sinh Thái 8 Website Vệ Tinh Tiện Ích Miễn Phí</h2>
+    <div class="cluster-box">
+      <ul>
+        <li><a href="https://tinhluonggrossnet.vn" target="_blank" rel="noopener">TinhLuongGrossNet.vn</a> — Bảng tính lương Gross Net chuẩn &amp; Tính thuế TNCN tự động 1-click.</li>
+        <li><a href="https://vongquaymayman.web.app" target="_blank" rel="noopener">VongQuayMayMan.web.app</a> — Tạo vòng quay may mắn online miễn phí &amp; bốc thăm ngẫu nhiên không quảng cáo.</li>
+        <li><a href="https://quickpsd.com" target="_blank" rel="noopener">QuickPSD.com</a> — Kho mẫu PSD chuẩn chất lượng cao, Mockup &amp; Font chữ Việt hóa miễn phí.</li>
+        <li><a href="https://lichampro.com" target="_blank" rel="noopener">LichAmPro.com</a> — Tra cứu lịch vạn niên, ngày tốt khai trương &amp; phong thủy bàn làm việc.</li>
+        <li><a href="https://daodaoreview.com" target="_blank" rel="noopener">DaoDaoReview.com</a> — Góc Review phim &amp; phân tích điện ảnh chuyên sâu không spoil.</li>
+        <li><a href="https://taomaqr.online" target="_blank" rel="noopener">TaoMaQR.online</a> — Tạo mã QR miễn phí không hết hạn, QR WiFi &amp; VietQR thanh toán 1-chạm.</li>
+        <li><a href="https://angicungduoc.food" target="_blank" rel="noopener">AnGiCungDuoc.food</a> — Vòng quay hôm nay ăn gì &amp; gợi ý món ngon văn phòng 3 miền.</li>
+        <li><a href="https://sapaview.vn" target="_blank" rel="noopener">SapaView.vn</a> — Xem thời tiết &amp; camera Sapa trực tiếp, cẩm nang du lịch tự túc.</li>
+      </ul>
+    </div>
+
+    <footer>
+      Phát hành theo giấy phép MIT License &bull; Bản quyền thuộc về
+      <a href="https://thuthuatviet.com/" target="_blank" rel="noopener">Thủ Thuật Việt (thuthuatviet.com)</a> &copy; 2026
+    </footer>
+  </main>
+</body>
+</html>
